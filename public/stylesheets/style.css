@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -28,5 +28,8 @@ a {
 
 .panel-menu .menu-bar li a{
   color: #00558B;
-  font-size: 0.9rem;
+}
+
+.menu-bar li a{
+  font-size: 0.9rem !important;
 }
