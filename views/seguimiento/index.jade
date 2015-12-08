@@ -1,2 +1,50 @@
 extends ../layout
 block content
+  h3.subheader Semáforo de atención
+  table.max.text-center.table-bordered
+    thead
+      tr
+        td.text-center(rowspan=2) Departamento
+        td.text-center(colspan=3) Días transcurridos / Número de documentos sin respuesta
+        td.text-center(rowspan=2) Total
+      tr
+        th.semaforo.verde De 0 a 20 días
+        th.semaforo.amarillo De 21 a 30 días
+        th.semaforo.rojo Más de 31 días
+    tfoot
+      tr
+        td.text-center Subdirección Administrativa
+        td.text-center 0
+        td.text-center 0
+        td.text-center 0
+        td.text-center 0
+    tbody
+      tr
+        td Departamento de tecnologías de la información
+        td 0
+        td 1
+        td 1
+        td
+          b 2
+      tr
+        td Departamento de Recursos Materiales y Servicios Generales
+        td 0
+        td 1
+        td 1
+        td
+          b 2
+      tr
+        td Departamento de Recursos Financieros
+        td 0
+        td 1
+        td 1
+        td
+          b 2  
+      tr
+        td Departamento de Recursos Humanos
+        td 0
+        td 1
+        td 1
+        td
+          b 2
+      

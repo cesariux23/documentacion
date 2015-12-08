@@ -33,3 +33,43 @@ a {
 .menu-bar li a{
   font-size: 0.9rem !important;
 }
+/*Imagenes para imprimir*/
+.margin0{
+  margin-bottom: 0 !important;
+}
+/*Color del semaforo*/
+
+th.semaforo{
+  border-radius: 0px;
+  color: #FFF;
+  text-align: center;
+}
+th.verde{
+  background: #43AC6A none repeat scroll 0% 0%;
+}
+th.amarillo{
+  background: #FFAE00 none repeat scroll 0% 0%;
+}
+th.rojo{
+  background: #F04124 none repeat scroll 0% 0%;
+}
+table.max{
+  width: 100%;
+}
+
+.table-bordered {
+  border: 1px solid #dddddd;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #dddddd;
+}
+
+.table-bordered > thead{
+  border-bottom-width: 2px;
+}
