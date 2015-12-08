@@ -2,18 +2,38 @@ extends ../layout
 block content
   form
     .grid-block
-      .medium-4.grid-content
-        label Tipo de emisión*
-        input(type="text")
-      .medium-4.grid-content
+      .medium-2.grid-content
         label Tipo de documento*
-        input(type="text")
+        select
+          option(value='Oficio') Oficio
+          option(value='Tarjera') Tarjera
+          option(value='Circular') Circular
+      .medium-2.grid-content
+        label Tipo de emisión*
+        select
+          option(value="Interno") Interno
+          option(value="Externo") Externo
+      .medium-4.grid-content
+        label Para*
+        input(type="checkbox" id="subdireccion")
+        label(for="pdireccion") Dirección
+        input(type="checkbox" id="coordinacion")
+        label(for="pcoordinacion") Coordinación de zona
+      .medium-3.grid-content
+        label Firma*
+        input(type="radio" id="subdireccion" name="areafirma")
+        label(for="fsubdireccion") Subdirección
+        input(type="radio" id="fdireccion" name="areafirma")
+        label(for="fdireccion") Dirección
       .medium-4.grid-content
         label Fecha de registro del documento
         h4 12/dic/2015
       .medium-12.grid-content
-        label Destinatario*
-        input(type="text")
+        .card
+          .card-divider
+            span Destinatario(s)*
+          .card-section
+            span :P
       .medium-12.grid-content
         label Asunto*
         input(type="text")

@@ -33,6 +33,10 @@ a {
 .menu-bar li a{
   font-size: 0.9rem !important;
 }
+
+.menu-bar li a span{
+  font-size: 15px !important;
+}
 /*Imagenes para imprimir*/
 .margin0{
   margin-bottom: 0 !important;

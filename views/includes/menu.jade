@@ -1,13 +1,22 @@
-.grid-block.shrink.vertical.panel-menu.hide-for-print
+.grid-block.medium-2.vertical.panel-menu.hide-for-print
   .text-center
     br
     img(src="/images/ivea.png" width="50%")
     h4.subheader Control documental
     hr
   ul.vertical.menu-bar.condense
-    li.title Documentos sin respuesta
+    li.title
+      |Documentos pendientes de respuesta
+    li.title
+      a.text-center
+        span.badge.success 10
+      a
+        span.badge.warning 5
+      a
+        span.badge.alert 243
     li
-      a(href="/seguimiento") Resumen general
+      a(href="/seguimiento")
+        |Resumen general
     li
       a(href="/seguimiento/area") Desglose por área
     li
