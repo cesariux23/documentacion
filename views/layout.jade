@@ -1,0 +1,26 @@
+include includes/head.jade
+div.grid-frame.vertical
+  .menu-group.dark
+    .menu-group-left
+      ul.menu-bar
+        li
+          a(disabled)
+            |<b>Subdirección Administrativa</b> <br> Departamento de tecnologías de la información
+    .menu-group-right
+      ul.menu-bar
+        li
+          a
+            i.fa.fa-user
+            |César Encarnación
+        li
+          a
+            i.fa.fa-key
+            |Cambiar contraseña
+        li
+          a
+            i.fa.fa-power-off
+            |Salir
+  .grid-block
+    include includes/menu.jade
+    .grid-content
+      block content

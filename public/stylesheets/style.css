@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.panel-menu{
+  background: #F9F9F9 none repeat scroll 0% 0% !important;
+  border-right: 1px solid #E7E7E7;
+}
+
+.panel-menu .menu-bar .title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+.panel-menu .menu-bar li {
+    background: #F9F9F9 none repeat scroll 0% 0% !important;
+    /*padding-left: 20px;*/
+}
+
+.panel-menu .menu-bar li a{
+  color: #00558B;
+  font-size: 0.9rem;
+}
