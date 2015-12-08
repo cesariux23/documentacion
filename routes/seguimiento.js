@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('seguimiento/index', { title: 'Documentos pendientes de respuesta' });
 });
-router.get('/area', function(req, res, next) {
+router.get('/todos', function(req, res, next) {
   res.render('seguimiento/index', { title: 'Documentos pendientes de respuesta' });
 });
 router.get('/registro', function(req, res, next) {
