@@ -1,15 +1,48 @@
 extends ../layout
 block content
-  table.stack
-    thead
-      tr
-        th No.
-        th Tipo
-        th Asunto
-        th Destinatario
-        th Fecha
-        th Acciones
-    tbody
-      tr
-        td 1
-        td 2
+table.max
+  thead
+    tr
+      th Núm.
+      th Fecha
+      th Asunto
+      th Descripción
+      th(width="200px") Acciones
+  tbody
+    tr
+      td
+        span Circular
+        br
+        b  SA/0057/2015
+      td 17/Nov/2015
+        br
+        span.subheader Interno
+      td
+        |INSTALACION DEL SERVICIOS DE DIRECTORIO ACTIVO
+        br
+        span.subheader
+          |SUBDIRECTORES DE AREA, JEFES DE UNIDAD Y JEFES DE DEPARTAMENTO
+          br
+          i Cargo
+        
+      td
+        //Recortar la descripción para que no se vuelva muy largo
+        |Instalación del active directoy en Dirección general
+          
+      td
+        a.button.hollow.primary
+          i.fa.fa-file-text
+        a.button.hollow.warning
+          i.fa.fa-pencil
+        a.button.hollow.alert
+          i.fa.fa-times
+ul.pagination.text-center(role="navigator" aria-label="pagination")
+  li.pagination-previous
+    a Anterior
+  li.current 1
+  li
+    a 2
+  li
+    a ...
+  li.pagination-next
+    a Siguiente
