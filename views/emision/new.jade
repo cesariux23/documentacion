@@ -33,10 +33,10 @@ block content
         input(type="radio" id="fdepto" name="areafirma")
         label(for="fdepto") Jefe(a) de departamento
       .medium-4.grid-content
-        label Nombre del funcionario que firma el documento
+        label Nombre del funcionario que firma el documento*
         input(type="text")
       .medium-4.grid-content
-        label Cargo del funcionario que firma el documento
+        label Cargo del funcionario que firma el documento*
         input(type="text")
     .grid-block
       .medium-12.grid-content 
@@ -45,19 +45,19 @@ block content
             br
             label Destinatario(s)*
           .float-right
-            label 
+            label
               |¿Generar un número de documento diferente por cada destinatario?
               input.switch-input(type="checkbox" id="cbVariosDestinatarios")
               label.switch-paddle(for="cbVariosDestinatarios")
                 span.switch-active.blanco(aria-hidden="true") Sí
                 span.switch-inactive(aria-hidden="true") No
           table.max
-            thead
+            tbody
               tr
                 th(width="10px") #
                 td Nombre*
                 td Cargo
-                td(width="80px") AT'N
+                td(width="100px")
                 td(width="150px")
               tr
                 th 1
@@ -67,19 +67,19 @@ block content
                   input(type="text")
                 th
                   input(type="checkbox" id="atn")
-                  label(for="atn") Sí
+                  label(for="atn") 
+                    b AT'N
                 th
                   button.button.warning
                     i.fa.fa-eraser
                   button.button.success
                     i.fa.fa-plus
-            tbody
+            
               tr
                 td 2
                 td César Encarnación
                 td Auxiliar
-                td 
-                  i.fa.fa-check
+                td AT'N
                 td 
                   a.button.alert
                     i.fa.fa-trash    
