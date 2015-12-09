@@ -2,44 +2,108 @@ extends ../layout
 block content
   form
     .grid-block
-      .medium-2.grid-content
+      .medium-4.grid-content
+        label Tipo de emisión*
+        select
+          option(value="Interno") Para áreas y/o CZs de IVEA
+          option(value="Externo") Para dependencias externas
+      .medium-3.grid-content
         label Tipo de documento*
         select
           option(value='Oficio') Oficio
-          option(value='Tarjera') Tarjera
+          option(value='Tarjera') Tarjeta
           option(value='Circular') Circular
       .medium-2.grid-content
-        label Tipo de emisión*
-        select
-          option(value="Interno") Interno
-          option(value="Externo") Externo
-      .medium-4.grid-content
-        label Para*
-        input(type="checkbox" id="subdireccion")
-        label(for="pdireccion") Dirección
-        input(type="checkbox" id="coordinacion")
-        label(for="pcoordinacion") Coordinación de zona
-      .medium-3.grid-content
-        label Firma*
-        input(type="radio" id="subdireccion" name="areafirma")
-        label(for="fsubdireccion") Subdirección
-        input(type="radio" id="fdireccion" name="areafirma")
-        label(for="fdireccion") Dirección
-      .medium-4.grid-content
         label Fecha de registro del documento
         h4 12/dic/2015
-      .medium-12.grid-content
-        .card
-          .card-divider
-            span Destinatario(s)*
-          .card-section
-            span :P
+      .medium-3.grid-content
+          .card.success
+            .card-divider 
+              i.fa.fa-info-circle.fa-2x
+              br
+              |Formato del número de documento a generar: 
+              b DG/##/2015
+    .grid-block
+      .medium-4.grid-content
+        label Firma*
+        input(type="radio" id="fdireccion" name="areafirma")
+        label(for="fdireccion") Director(a)
+        input(type="radio" id="subdireccion" name="areafirma")
+        label(for="fsubdireccion") Subdirector(a)
+        input(type="radio" id="fdepto" name="areafirma")
+        label(for="fdepto") Jefe(a) de departamento
+      .medium-4.grid-content
+        label Nombre del funcionario que firma el documento
+        input(type="text")
+      .medium-4.grid-content
+        label Cargo del funcionario que firma el documento
+        input(type="text")
+    .grid-block
+      .medium-12.grid-content 
+        .clearfix
+          .float-left
+            br
+            label Destinatario(s)*
+          .float-right
+            label 
+              |¿Generar un número de documento diferente por cada destinatario?
+              input.switch-input(type="checkbox" id="cbVariosDestinatarios")
+              label.switch-paddle(for="cbVariosDestinatarios")
+                span.switch-active.blanco(aria-hidden="true") Sí
+                span.switch-inactive(aria-hidden="true") No
+          table.max
+            thead
+              tr
+                th(width="10px") #
+                td Nombre*
+                td Cargo
+                td(width="80px") AT'N
+                td(width="150px")
+              tr
+                th 1
+                th
+                  input(type="text")
+                th
+                  input(type="text")
+                th
+                  input(type="checkbox" id="atn")
+                  label(for="atn") Sí
+                th
+                  button.button.warning
+                    i.fa.fa-eraser
+                  button.button.success
+                    i.fa.fa-plus
+            tbody
+              tr
+                td 2
+                td César Encarnación
+                td Auxiliar
+                td 
+                  i.fa.fa-check
+                td 
+                  a.button.alert
+                    i.fa.fa-trash    
       .medium-12.grid-content
         label Asunto*
         input(type="text")
-      .medium-12.grid-content
+      .medium-6.grid-content
         label Descripción del documento*
         textarea
-      .medium-12.grid-content
+      .medium-6.grid-content
         label Con copia para
         textarea
+      .medium-6.grid-content
+        label Elaboró
+        input(type="text")
+      .medium-6.grid-content
+        label Departamento solicitante
+        input(type="text")
+      .medium-12.grid-content
+        button.button.success
+          i.fa.fa-save.fa-2x
+          br
+          |&nbspRegistrar documento
+        a.button.alert(href="/emision")
+          i.fa.fa-times.fa-2x
+          br
+          |&nbspCancelar registro

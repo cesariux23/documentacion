@@ -37,6 +37,11 @@ a {
 .menu-bar li a span{
   font-size: 15px !important;
 }
+
+/*color para switch*/
+.blanco{
+  color: white !important;
+}
 /*Imagenes para imprimir*/
 .margin0{
   margin-bottom: 0 !important;
