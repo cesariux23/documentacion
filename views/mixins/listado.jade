@@ -1,52 +1,45 @@
 mixin listado(documentos, tipo)
-  table.max
-    thead
-      tr
-        th Núm.
-        th(width="100px") Fecha de emisión
-        th Asunto
-        th Destinatario(s)
-        th(width="200px") Acciones
-    tbody
-      //llena la tabla con los datos
-      each doc in documentos
-        tr
-          td
-            b=doc.numero
-            br
-            span.subheader=doc.documento
-          td
-            span=doc.fecha
-            //en los turnos no se muestra el tipo de emision del documento
-            if tipo!="turnos"
-              br
-              span.subheader=doc.emision            
-          td=doc.asunto
-          td
-            //muestra cada destinatario que este registrado en el documento
-            each d in doc.destinatarios
-              br
-              if d.atn
-                b AT'N:
+  .box
+    .box-body
+      table#listado.table.table-striped.table-bordered(data-page-length='5')
+        thead
+          tr
+            th Núm.
+            th(width="100px") Fecha de emisión
+            th Asunto
+            th Destinatario(s)
+            th(width="200px") Acciones
+        tbody
+          //llena la tabla con los datos
+          each doc in documentos
+            tr
+              td
+                b=doc.numero
                 br
-              span=d.nombre
-              if d.cargo
-                br
-                span.subheader=d.cargo
-          td
-            a.button.hollow.primary
-              i.fa.fa-file-text
-            a.button.hollow.warning
-              i.fa.fa-pencil
-            a.button.hollow.alert
-              i.fa.fa-times            
-  ul.pagination.text-center(role="navigator" aria-label="pagination")
-    li.pagination-previous
-      a Anterior
-    li.current 1
-    li
-      a 2
-    li
-      a ...
-    li.pagination-next
-      a Siguiente
+                span.text-muted=doc.documento
+              td
+                span=doc.fecha
+                //en los turnos no se muestra el tipo de emision del documento
+                if tipo!="turnos"
+                  br
+                  span.text-muted=doc.emision            
+              td=doc.asunto
+              td
+                //muestra cada destinatario que este registrado en el documento
+                each d in doc.destinatarios
+                  if d.atn
+                    b AT'N:
+                    br
+                  span=d.nombre
+                  if d.cargo
+                    br
+                    span.text-muted=d.cargo
+                  br
+              td
+                .btn-group
+                  a.btn.btn-primary
+                    i.fa.fa-file-text
+                  a.btn.btn-warning
+                    i.fa.fa-pencil
+                  a.btn.btn-danger
+                    i.fa.fa-times

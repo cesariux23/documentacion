@@ -1,0 +1,83 @@
+aside.main-sidebar
+  section.sidebar(style="height: auto;")
+    .user-panel
+      .image.text-center
+        img(src="/images/logo.png" class="img-circle" alt="IVEA")
+      .info.subdireccion
+        b Subdirección Administrativa
+        br
+        small Departamento de Tecnologías de la Información
+    form.sidebar-form(action="index.html", method="post")
+      .input-group
+        input.form-control(type="text", name="q", placeholder="Número de documento")
+        span.input-group-btn
+          button.btn.btn-flat(type="submit", name="search")
+            i.fa.fa-search        
+    ul.sidebar-menu
+      li.header DOCUMENTOS SIN RESPUESTA
+      li
+        a(href="#") 
+          i.fa.fa-newspaper-o
+          span Resumen general
+      li
+        a(href="#") 
+          i.fa.fa-circle.text-green
+          span De <b>0</b> a <b>20</b> días
+      li
+        a(href="#") 
+          i.fa.fa-circle.text-yellow
+          span De <b>21</b> a <b>35</b> días
+      li
+        a(href="#") 
+          i.fa.fa-circle.text-red
+          span Más de <b>35</b> días
+        
+      
+      li.header MENÚ PRINCIPAL
+      li.treeview
+        a(href="#")
+          i.fa.fa-files-o
+          span Emisión
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li
+            a(href="/emision")
+              i.fa.fa-circle-o
+              |Listado
+          li 
+            a(href="/emision/registro") 
+              i.fa.fa-plus-circle
+              |Registrar nuevo
+      li.treeview
+        a(href="#")
+          i.fa.fa-folder-open-o
+          span Recepción
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li
+            a(href="/recepcion")
+              i.fa.fa-circle-o
+              |Listado
+          li 
+            a(href="/recepcion/registro") 
+              i.fa.fa-plus-circle
+              |Registrar nuevo
+      
+      li.treeview
+        a(href="#")
+          i.fa.fa-send-o
+          span Turnos
+          i.fa.fa-angle-left.pull-right
+        ul.treeview-menu
+          li
+            a(href="/turnos")
+              i.fa.fa-circle-o
+              |Listado
+          li 
+            a(href="/turnos/registro") 
+              i.fa.fa-plus-circle
+              |Registrar nuevo
+      li 
+        a(href="#") 
+          i.fa.fa-archive
+          span Paquetes

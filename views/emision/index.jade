@@ -2,3 +2,17 @@ extends ../layout
 include ../mixins/listado.jade
 block content
   +listado(documentos)
+block scripts
+  //DataTables
+  script(src="../../plugins/datatables/jquery.dataTables.min.js")
+  script(src="../../plugins/datatables/dataTables.bootstrap.min.js")
+  
+block custom_script
+  script(type='text/javascript').
+      $(function () {
+          $('#listado').DataTable({
+            language: {
+                url: '/localisation/Spanish.json'
+            }
+          });
+        });

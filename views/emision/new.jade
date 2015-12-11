@@ -15,7 +15,7 @@ block content
           option(value='Circular') Circular
       .medium-2.grid-content
         label Fecha de registro del documento
-        h4 12/dic/2015
+        h4 12/Dic/2015
       .medium-3.grid-content
           .card.success
             .card-divider 
@@ -39,19 +39,18 @@ block content
         label Cargo del funcionario que firma el documento*
         input(type="text")
     .grid-block
-      .medium-12.grid-content 
-        .clearfix
-          .float-left
-            br
-            label Destinatario(s)*
-          .float-right
-            label
-              |¿Generar un número de documento diferente por cada destinatario?
-              input.switch-input(type="checkbox" id="cbVariosDestinatarios")
-              label.switch-paddle(for="cbVariosDestinatarios")
-                span.switch-active.blanco(aria-hidden="true") Sí
-                span.switch-inactive(aria-hidden="true") No
+      .medium-12.grid-content
           table.max
+            thead
+              tr
+                th(colspan=2) Destinatario(s)*
+                th.text-right(colspan=2) ¿Generar un número de documento diferente por cada destinatario?
+                th
+                  .switch.small
+                    input.switch-input(type="checkbox" id="cbVariosDestinatarios")
+                    label.switch-paddle(for="cbVariosDestinatarios")
+                      span.switch-active.blanco(aria-hidden="true") Sí
+                      span.switch-inactive(aria-hidden="true") No
             tbody
               tr
                 th(width="10px") #
